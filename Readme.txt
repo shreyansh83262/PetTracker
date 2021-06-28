@@ -16,3 +16,22 @@ founders are not available for consultation; list significant assumptions you ma
 (including work to be done in different phases of development).
 The service prototype will use canned location data and will be used for initial integration as the
 mobile app is developed. Again, list significant assumptions made in creating the prototype
+
+
+Assumption:
+
+1) The Data Collection Units installed on the tower write data continuously to a CSV file
+2) We are not capturing the GPS but we have a tower unit which does all the work GPS data capturing
+3) Capacity Estimation and Constraints
+#
+Let’s assume that we have 500 daily active users, and on average, each unit sends 400 messages daily; this gives us 200000 messages per day.
+
+Storage Estimation: A message is 100 bytes. So to store all the messages for one day, we would need 100GB of storage.
+
+High level estimates:
+
+Total messages	200000 unit messages per day
+Storage for each day	100GB
+Storage for 30 days days max data being stored 3000GB/3TB
+Addiotinal Buffer of 3TB for buffer DB
+
